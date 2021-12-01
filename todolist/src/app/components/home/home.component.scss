@@ -1,0 +1,62 @@
+
+.main__wrapper {
+  margin: 0 auto;
+  max-width: 1366px;
+
+  &-task {
+    display: flex;
+    align-items: center;
+    transition: .4s ease-in-out;
+
+    &.done {
+      opacity: .7;
+    }
+
+    &:not(:first-child) {
+      border-top: solid 1px #f0f0f02a;
+    }
+
+    label {
+      width: 30px;
+      height: 30px;
+      flex: 0 0 30px;
+      cursor: pointer;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      input {
+        width: 15px;
+        height: 15px;
+        cursor: inherit;
+        accent-color: skyblue;
+      }
+    }
+
+    .task-content {
+      flex: 1;
+      padding: 12px 15px;
+
+      .label-title,
+      .description {
+        color: #f0f0f0;
+      }
+
+      .label-title {
+        text-transform: uppercase;
+        font: 500 1rem "Roboto", sans-serif;
+      }
+
+      .description {
+        margin: 12px 0 0;
+        text-transform: capitalize;
+        font: 400 .875rem "Roboto", sans-serif;
+      }
+    }
+
+    .controls {
+      flex: 0 0 120px;
+    }
+  }
+}

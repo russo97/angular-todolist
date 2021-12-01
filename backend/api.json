@@ -1,0 +1,29 @@
+{
+  "tasks": [
+    {
+      "title": "tarefa 1",
+      "description": "descrição tarefa",
+      "done": false,
+      "id": "awake"
+    },
+    {
+      "title": "tarefa 2",
+      "description": "descrição tarefa",
+      "done": false,
+      "id": "awake1"
+    },
+    {
+      "title": "tarefa 3",
+      "description": "descrição tarefa",
+      "done": false,
+      "id": "awake2"
+    }
+  ],
+  "users": [
+    {
+      "password": "12345678",
+      "name": "Wanderson Silva",
+      "login": "wandersonsilva768@gmail.com"
+    }
+  ]
+}

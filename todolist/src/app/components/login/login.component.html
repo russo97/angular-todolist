@@ -1,0 +1,20 @@
+
+<div class="login">
+  <div class="login__wrapper">
+    <form *ngIf="logInForm" [formGroup]="logInForm" (ngSubmit)="onSubmitLogin()">
+      <div class="input-group">
+        <label for="user">Usuário: </label>
+        <input type="text" id="user" name="user" formControlName="user" />
+      </div>
+
+      <div class="input-group">
+        <label for="password">Senha: </label>
+        <input type="password" id="password" name="password" formControlName="password" />
+      </div>
+
+      <div class="input-group submit">
+        <input type="submit" value="Login" />
+      </div>
+    </form>
+  </div>
+</div>

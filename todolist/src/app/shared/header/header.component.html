@@ -1,0 +1,22 @@
+
+<header class="header">
+  <div class="header__wrapper">
+    <a routerLink="/" class="header__wrapper-logo">
+      <figure class="logofigure">
+        <img src="" alt="Todo List Logo" class="logofigure__image" />
+      </figure>
+    </a>
+  
+    <nav class="header__wrapper-nav" *ngIf="isLoggedIn">
+      <ul>
+        <li>
+          <a routerLink="login">Login</a>
+        </li>
+        <li>
+          <a routerLink="signup">Sign Up</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+

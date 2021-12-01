@@ -1,0 +1,13 @@
+
+.header {
+  background-color: #202020;
+
+  &__wrapper {
+    margin: 0 auto;
+    max-width: 1366px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}

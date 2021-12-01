@@ -1,0 +1,23 @@
+
+<div class="main__wrapper" *ngIf="taskList$ | async as taskList;">
+  <div class="main__wrapper-task" *ngFor="let task of taskList" [class]="{ 'done': task.done }">
+    <label>
+      <input type="checkbox" (change)="markAsDone(task)" [checked]="task.done" />
+    </label>
+
+    <div class="task-content">
+      <div class="label-title">
+        {{ task.title }}
+      </div>
+  
+      <div class="description">
+        {{ task.description }}
+      </div>
+    </div>
+
+    <div class="controls">
+      <a routerLink="/tasks/edit/1">Editar Task</a>
+      <a (click)="deleteTask(task.id)">Deletar Task</a>
+    </div>
+  </div>
+</div>
