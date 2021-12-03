@@ -3,7 +3,7 @@
     {
       "title": "tarefa 1",
       "description": "descrição tarefa",
-      "done": false,
+      "done": true,
       "id": "awake"
     },
     {

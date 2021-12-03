@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { EventEmitter } from 'stream';
+
+import { LoginServiceService } from 'src/app/services/login-service.service';
 
 @Component({
   selector: 'app-header',
@@ -8,12 +9,12 @@ import { EventEmitter } from 'stream';
 })
 export class HeaderComponent implements OnInit {
 
-  @Input()
-  isLoggedIn = false;
+  exibirMenu: boolean = !1;
 
-  constructor() { }
+  constructor(private loginService: LoginServiceService) {}
 
   ngOnInit(): void {
+    this.loginService.exibirRotas.subscribe(exibir => this.exibirMenu = exibir);
   }
 
 }

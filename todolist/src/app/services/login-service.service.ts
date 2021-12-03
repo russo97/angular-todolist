@@ -5,27 +5,31 @@ import { Router } from '@angular/router';
   providedIn: 'root'
 })
 export class LoginServiceService {
-  isAuthenticated: boolean = !0;
+  hasAuth: boolean = !1;
 
   exibirRotas: EventEmitter<boolean> = new EventEmitter<boolean>();
 
   constructor(private router: Router) {}
 
   public logIn (user: string, password: string) {
-    this.isAuthenticated = (
+    this.hasAuth = (
       user === "admin@admin.com" && password === "12345678"
     );
 
-    this.exibirRotas.emit(this.isAuthenticated);
+    this.exibirRotas.emit(this.hasAuth);
 
-    this.isAuthenticated && this.router.navigate(['']);
+    this.hasAuth && this.router.navigate(['home']);
   }
 
   public logOut () {
-    this.isAuthenticated = !1;
+    this.hasAuth = !1;
 
-    this.exibirRotas.emit(this.isAuthenticated);
+    this.exibirRotas.emit(this.hasAuth);
 
     this.router.navigate(['']);
+  }
+
+  isAuthenticated (): boolean {
+    return this.hasAuth;
   }
 }

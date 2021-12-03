@@ -1,7 +1,7 @@
 
 <div class="login">
   <div class="login__wrapper">
-    <form *ngIf="logInForm" [formGroup]="logInForm" (ngSubmit)="onSubmitLogin()">
+    <form *ngIf="loginForm" [formGroup]="loginForm" (ngSubmit)="onSubmitLogin()">
       <div class="input-group">
         <label for="user">Usuário: </label>
         <input type="text" id="user" name="user" formControlName="user" />

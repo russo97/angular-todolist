@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup } from '@angular/forms';
 
 import { LoginServiceService as loginService } from 'src/app/services/login-service.service';
 
@@ -10,24 +10,22 @@ import { LoginServiceService as loginService } from 'src/app/services/login-serv
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
-  logInForm?: FormGroup;
+  loginForm?: FormGroup;
 
   constructor (private loginService: loginService) { }
 
   ngOnInit(): void {
-    this.logInForm = new FormGroup({
-      user: new FormControl(null),
-      password: new FormControl(null)
+    this.loginForm = new FormGroup({
+      'user': new FormControl(null),
+      'password': new FormControl(null)
     });
   }
 
   onSubmitLogin () {
-    let user = this.logInForm?.controls['user'].value;
-    let pass = this.logInForm?.controls['password'].value;
+    let user = this.loginForm?.controls['user'].value;
+    let pass = this.loginForm?.controls['password'].value;
 
-    this.loginService.logIn(
-      user, pass
-    );
+    this.loginService.logIn(user, pass);
   }
 
 }

@@ -7,13 +7,23 @@
       </figure>
     </a>
   
-    <nav class="header__wrapper-nav" *ngIf="isLoggedIn">
-      <ul>
+    <nav class="header__wrapper-nav">
+      <ul *ngIf="exibirMenu">
         <li>
           <a routerLink="login">Login</a>
         </li>
         <li>
           <a routerLink="signup">Sign Up</a>
+        </li>
+      </ul>
+
+      <ul *ngIf="!exibirMenu">
+        <li>
+          <a href="#">Login</a>
+        </li>
+
+        <li>
+          <a href="#">Sign up</a>
         </li>
       </ul>
     </nav>

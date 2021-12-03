@@ -27,14 +27,13 @@ import { LoginComponent } from './components/login/login.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   exports: [
     CommonModule
   ],
-  providers: [
-    FormGroup, ReactiveFormsModule
-  ],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
